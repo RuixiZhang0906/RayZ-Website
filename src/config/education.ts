@@ -19,18 +19,18 @@ export type EducationItemType = {
       start: '2017',
       end: '2020'
     },
+    // {
+    //   school: 'University of Chicago',
+    //   major: 'Computer Science',
+    //   logo: 'college',
+    //   start: '2013',
+    //   end: '2015'
+    // },
     {
-      school: 'University of Chicago',
-      major: 'Computer Science',
+      school: 'Jilin Uiversity',
+      major: 'Software Engineering',
       logo: 'college',
-      start: '2013',
-      end: '2015'
-    },
-    {
-      school: 'BUPT',
-      major: 'Automation',
-      logo: 'college',
-      start: '2009',
-      end: '2013'
+      start: '2021.9',
+      end: '2025.7'
     },
   ]
