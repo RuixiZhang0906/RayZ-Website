@@ -35,21 +35,17 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Awards */}
-        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
-          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            <Award size={28}/>
-            {awardsHeadLine}
-          </h2>
-          <ul
-            role="list"
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
-          >
-            {awards.map((award) => (
-              <ActivityCard key={award.name} activity={award} titleAs='h3'/>
-            ))}
-          </ul>
+        {/* 教育与工作信息，两列布局 */}
+        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <Education />
+          </div>
+          <div>
+            <Career />
+          </div>
         </div>
+
+
 
         {/* Research & Projects */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
@@ -70,7 +66,7 @@ export default async function Home() {
           </ul>
         </div>
 
-        {/* Hobbies & Volunteer */}
+        {/* Hobbies & Volunteer
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
             <Heart size={28}/>
@@ -87,6 +83,22 @@ export default async function Home() {
               <ActivityCard key={activity.name} activity={activity} titleAs='h3'/>
             ))}
           </ul>
+        </div> */}
+
+          {/* Awards */}
+          <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
+            <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
+              <Award size={28}/>
+              {awardsHeadLine}
+            </h2>
+            <ul
+              role="list"
+              className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+            >
+              {awards.map((award) => (
+                <ActivityCard key={award.name} activity={award} titleAs='h3'/>
+              ))}
+            </ul>
         </div>
 
         {/* Blog Section */}
@@ -99,19 +111,10 @@ export default async function Home() {
           </p>
         </div>
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          {/* left column */}
-          {/* blog */}
-          <div className="flex flex-col gap-16">
-            {blogList.map((blog: BlogType) => (
-              <BlogCard key={blog.slug} blog={blog} titleAs='h3'/>
-            ))}
-          </div>
-
-          {/* right column */}
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Career />
-            <Education />
-          </div>
+          {/* blog cards - full width */}
+          {blogList.map((blog: BlogType) => (
+            <BlogCard key={blog.slug} blog={blog} titleAs='h3'/>
+          ))}
         </div>
       </Container>
     </>

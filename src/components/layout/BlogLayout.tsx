@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { AppContext } from '@/app/providers'
 import { Container } from '@/components/layout/Container'
 import { Prose } from '@/components/shared/Prose'
+import { Tags } from '@/components/shared/Tags'
 import { type BlogType } from '@/lib/blogs'
 import { formatDate } from '@/lib/formatDate'
 
@@ -60,6 +61,30 @@ export function BlogLayout({
                 <span className="mx-2">·</span>
                 <span>{blog.author}</span>
               </time>
+              
+              {/* Reading time and tags */}
+              <div className="mt-4 flex flex-col gap-3">
+                {blog.readingTime && (
+                  <div className="flex items-center text-sm text-zinc-600 dark:text-zinc-400">
+                    <svg
+                      className="mr-2 h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    {blog.readingTime.text}
+                  </div>
+                )}
+                <Tags tags={blog.tags} />
+              </div>
             </header>
             <Prose className="mt-8" data-mdx-content>
               {children}

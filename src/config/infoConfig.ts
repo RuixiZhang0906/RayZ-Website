@@ -4,9 +4,9 @@ export * from './career'
 
 // personal info
 export const name = 'Ruixi Zhang'
-export const headline = 'First-Year Master\'s Student in Computer Science at ICT, CAS';
+export const headline = 'Software engineer, AI enthusiast';
 export const introduction =
-  "I am Ruixi Zhang, who is currently pursuing my Master's degree at the Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS). Previously, I graduated from the School of Software Engineering at Jilin University. My research focuses on ML systems, AI infrastructure, and Large Language Models (LLMs), with prior experience in computer vision and computer graphics that continues to inspire my work.";
+  "I am a Master's student at the Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), focusing on ML systems, AI infrastructure, and Large Language Models. Previously graduated from Jilin University's School of Software Engineering. For more details about my background and research interests, please visit my About page.";
 export const email = 'zhangrx5521@163.com'
 export const githubUsername = 'RuixiZhang0906'
 

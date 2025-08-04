@@ -2,6 +2,7 @@ import glob from 'fast-glob'
 import { promises as fs } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import readingTime from 'reading-time'
 
 export type BlogType = {
   title: string
@@ -9,6 +10,13 @@ export type BlogType = {
   author: string
   date: string
   slug: string
+  tags?: string[]
+  readingTime?: {
+    text: string
+    minutes: number
+    time: number
+    words: number
+  }
 }
 
 async function importBlog(
@@ -19,12 +27,16 @@ async function importBlog(
     'utf-8'
   )
   
-  const { data } = matter(source)
+  const { data, content } = matter(source)
+  
+  // Calculate reading time
+  const stats = readingTime(content)
   
   // @ts-expect-error
   return {
     slug: blogFilename.replace(/\.mdx$/, ''),
     ...data,
+    readingTime: stats,
   }
 }
 

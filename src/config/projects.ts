@@ -23,7 +23,7 @@ export const awards: Array<ActivityItemType> = [
     name: 'First Class of Study Award',
     description: '',
     date: '2025,2024',
-    location: 'Jilin University,Changchun',
+    location: 'Jilin University',
   },
   {
     name: 'Math Awards',
