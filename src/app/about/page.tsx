@@ -34,7 +34,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-xl text-zinc-700 dark:text-zinc-300">
             <p>
-              My name is <strong>Ruixi Zhang(张睿曦)</strong>. I'm originally from Shaanxi, China, and currently pursuing my Master's degree at the{' '}
+              My name is <strong>Ruixi Zhang(张睿曦)</strong>. I&apos;m originally from Shaanxi, China, and currently pursuing my Master&apos;s degree at the{' '}
               <a 
                 href="https://www.ict.ac.cn/" 
                 target="_blank" 
@@ -59,12 +59,12 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-zinc-900 dark:text-zinc-50 underline hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
               >
-                Jilin University's School of Software Engineering
+                Jilin University&apos;s School of Software Engineering
               </a>
               .
             </p>
             <p>
-              My work centers on building <strong>efficient Machine Learning systems and AI infrastructure</strong>, with a specialized focus on optimizing <strong>Large Language Model (LLM) deployment</strong> for real-world applications. I'm particularly passionate about solving <strong>scalability challenges in distributed training and inference</strong>—recently contributing to a CAS project that <strong>reduced LLM serving latency by 37%</strong> through novel quantization techniques.
+              My work centers on building <strong>efficient Machine Learning systems and AI infrastructure</strong>, with a specialized focus on optimizing <strong>Large Language Model (LLM) deployment</strong> for real-world applications. I&apos;m particularly passionate about solving <strong>scalability challenges in distributed training and inference</strong>—recently contributing to a CAS project that <strong>reduced LLM serving latency by 37%</strong> through novel quantization techniques.
             </p>
             <p>
               While my current research explores the frontiers of <strong>LLM systems</strong>, my background in <strong>computer vision and computer graphics</strong> continues to shape my perspective. I believe <strong>cross-domain insights</strong>—from 3D rendering pipelines to neural network architectures—are essential for creating more robust, interpretable AI. Through this blog, I share technical deep dives, research reflections, and practical lessons from the rapidly evolving AI landscape.
