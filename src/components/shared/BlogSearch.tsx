@@ -6,9 +6,10 @@ import { type BlogType } from '@/lib/blogs'
 interface BlogSearchProps {
   blogs: BlogType[]
   onSearchResults: (results: BlogType[]) => void
+  onSearchChange?: (query: string) => void
 }
 
-export function BlogSearch({ blogs, onSearchResults }: BlogSearchProps) {
+export function BlogSearch({ blogs, onSearchResults, onSearchChange }: BlogSearchProps) {
   const [searchQuery, setSearchQuery] = useState('')
 
   const filteredBlogs = useMemo(() => {
@@ -31,7 +32,8 @@ export function BlogSearch({ blogs, onSearchResults }: BlogSearchProps) {
   // Update parent component with search results
   useMemo(() => {
     onSearchResults(filteredBlogs)
-  }, [filteredBlogs, onSearchResults])
+    onSearchChange?.(searchQuery)
+  }, [filteredBlogs, onSearchResults, searchQuery, onSearchChange])
 
   return (
     <div className="mb-4">

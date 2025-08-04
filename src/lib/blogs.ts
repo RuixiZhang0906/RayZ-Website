@@ -64,3 +64,10 @@ export async function getBlogBySlug(slug: string): Promise<BlogType | null> {
     return null
   }
 }
+
+export async function getAllTags(): Promise<string[]> {
+  const blogs = await getAllBlogs()
+  const allTags = blogs.flatMap(blog => blog.tags || [])
+  const uniqueTags = [...new Set(allTags)].sort()
+  return uniqueTags
+}
